@@ -1,9 +1,13 @@
-export default function App() {
+import Login from "./pages/auth/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
   return (
-    <div className="p-10">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Vehicle Service Management 🚗
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+export default App;
